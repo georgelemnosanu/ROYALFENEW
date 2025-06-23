@@ -56,7 +56,7 @@ export default function ProductPage({ params }: PageProps) {
   const loadProduct = async () => {
     try {
       // Use the backend API instead of Next.js API routes
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://lmndev.com/api/v1"
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://lmndev.com/api/v1"
 
       const [productRes, reviewsRes] = await Promise.all([
         fetch(`${API_BASE_URL}/products/${id}`),
@@ -100,7 +100,7 @@ export default function ProductPage({ params }: PageProps) {
     if (!product?.id || !newReview.comment.trim()) return
 
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://lmndev.com/api/v1"
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://lmndev.com/api/v1"
 
       const response = await fetch(`${API_BASE_URL}/reviews`, {
         method: "POST",
