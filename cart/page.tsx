@@ -35,7 +35,7 @@ export default function CartPage() {
 
   const loadCart = async () => {
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api/v1"
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://lmndev.com/api/v1"
       const response = await fetch(`${API_BASE_URL}/cart/1`) // Mock user ID
       if (response.ok) {
         const data = await response.json()
@@ -52,7 +52,7 @@ export default function CartPage() {
     if (newQuantity < 1) return
 
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api/v1"
+      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://lmndev.com/api/v1"
       const response = await fetch(`${API_BASE_URL}/cart/${itemId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },

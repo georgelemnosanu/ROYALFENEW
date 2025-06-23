@@ -42,7 +42,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(false)
   const [cartItems, setCartItems] = useState<number>(0)
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api/v1"
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://llmndev.com/api/v1"
   const MOCK_USER_ID = 1 // In a real app, this would come from authentication
 
   useEffect(() => {
